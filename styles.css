@@ -729,3 +729,6 @@ body.ba-pulse :is(.hero-copy p,.section-head p){
 .detail-preview,.builder{
   box-shadow:0 16px 48px rgba(0,0,0,.22),0 0 calc(30px * var(--glow-mult,1)) rgba(var(--glow-rgb,255,211,111),calc(.20 * var(--glow-mult,1)))!important;
 }
+
+/* Keep the 3D artwork inside its rounded glass outline. */
+.orb .svc-img,.svc-img{border-radius:24%!important;clip-path:inset(2% round 24%);overflow:hidden!important;object-fit:cover;}
