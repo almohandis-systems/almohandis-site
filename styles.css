@@ -732,3 +732,6 @@ body.ba-pulse :is(.hero-copy p,.section-head p){
 
 /* Keep the 3D artwork inside its rounded glass outline. */
 .orb .svc-img,.svc-img{border-radius:24%!important;clip-path:inset(2% round 24%);overflow:hidden!important;object-fit:cover;}
+
+/* Avoid a square glow panel behind the mobile carousel. */
+.carousel-shell{background:none!important;border-radius:30px}.orb .svc-img{filter:none!important}
