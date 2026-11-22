@@ -1045,3 +1045,34 @@ body:not(.lt) .btn:focus-visible{outline:2px solid #ffd36f;outline-offset:2px}
   body:not(.lt){background-attachment:scroll!important}
   body:not(.lt) .hero{padding:44px 6% 48px;border-radius:22px}
 }
+
+/* Readability v41: larger, clearer text everywhere (all themes) */
+html{-webkit-text-size-adjust:100%}
+body{font-size:17px!important;line-height:1.7}
+nav a,nav button{font-size:15px!important}
+.btn{font-size:16px!important}
+.brand-name{font-size:17px!important}
+.brand-sub{font-size:13px!important}
+.section-head p{font-size:17px!important;line-height:1.8!important}
+.service-card .price{font-size:17px!important;font-weight:800!important}
+.service-card .hint,.carousel-help{font-size:15px!important;opacity:1!important}
+.service-card .index,body.lt .service-card .index{font-size:14px!important}
+.service-card h3,.service-card strong{font-size:clamp(18px,4.6vw,22px)}
+.service-card p{font-size:15.5px!important;line-height:1.7!important}
+.detail-preview p,.feature p,.project p,.work-body p,body.lt .work-body p,.info-panel p,.info-panel li,.owner-gate-card p{font-size:16px!important;line-height:1.75!important}
+.pick{font-size:15px!important}
+.estimate small,.estimate ul,.footer,.notice,.price-note,.footer .footer-links a,html[dir=ltr] .footer .footer-links a{font-size:15px!important}
+.chip,.status,.eyebrow,.detail-hero .eyebrow,.tab,.admin-launch,.mini-btn,.toast,.field label,.rf-row label,.tray-item .lbl,.tray-item .prc{font-size:14.5px!important}
+.field input,.field textarea,.field select,.request-form input,.request-form select,.request-form textarea{font-size:16px!important}
+.service-row strong{font-size:16px!important}
+.service-row small{font-size:14px!important}
+.owner-meta strong,.hero .owner-mini .owner-meta strong,.founder-sec .owner-mini .owner-meta strong{font-size:16px!important}
+.owner-meta span,.hero .owner-mini .owner-meta span,.founder-sec .owner-mini .owner-meta span{font-size:14px!important}
+.owner-meta small,.hero .owner-mini .owner-meta small,.founder-sec .owner-mini .owner-meta small{font-size:13px!important}
+.work-thumb:after{font-size:13px!important}
+/* Side cards of the carousel: keep text readable even when scaled/dimmed */
+body:not(.lt) .service-card,body:not(.lt) .feature p,body:not(.lt) .project p,body:not(.lt) .section-head p{color:#f3f6fb}
+body:not(.lt) nav a,body:not(.lt) nav button{color:#f4f7fc!important;background:rgba(255,255,255,.10)!important;border-color:rgba(255,211,111,.45)!important}
+body:not(.lt) .btn:not(.primary){color:#fff!important;background:rgba(255,255,255,.14)!important;border:1px solid rgba(255,211,111,.5)!important}
+body:not(.lt) .service-card h3,body:not(.lt) .service-card strong,body:not(.lt) .service-card .hint{color:#fff!important}
+body:not(.lt) .service-card .price{color:#ffd36f!important}
