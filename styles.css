@@ -840,3 +840,20 @@ body.lt #refTitle{filter:drop-shadow(0 2px 3px rgba(90,70,20,.3))}
 
 /* c15 refTitle rainbow fix */
 html body #refTitle{background:linear-gradient(90deg,#f0d020,#3fb2e5 22%,#5cc57f 42%,#e060a8 62%,#a060d8 82%,#f0d020)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important;filter:drop-shadow(0 2px 4px rgba(90,70,20,.28))}
+
+
+/* c16 light-theme contrast + crystal wordmark */
+body.lt .hero-tagline{color:#1b2a44!important;text-shadow:none!important;font-weight:900}
+body.lt .section-head h2,body.lt .hero h1{text-shadow:0 2px 8px #16233c26!important}
+body.lt .section-head p,body.lt .sec-sub{color:#33415a!important;text-shadow:none!important}
+body.lt .service-card h3{color:#12223c!important;text-shadow:none!important;font-weight:900}
+body.lt .service-card .price{color:#7d5c10!important;text-shadow:none!important}
+body.lt .service-card .hint{color:#3d4b63!important;text-shadow:none!important}
+body.lt .service-card .index{color:#5a6a84!important}
+body.lt label{color:#6e5010!important;text-shadow:none!important;font-weight:800}
+body.lt .brand-frame{background:none!important;border:none!important;box-shadow:none!important;padding:4px 4px 2px!important}
+body.lt .brand-name{animation:none!important;filter:drop-shadow(0 2px 5px rgba(18,32,56,.3))}
+body.lt .brand-name span{text-shadow:none!important}
+body.lt .brand-name .a{background:linear-gradient(135deg,#e9c95c,#a97c14 45%,#6f93c4)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important}
+body.lt .brand-name .b{background:linear-gradient(135deg,#3a5a8c,#10233d 60%,#4a6a96)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important}
+body.lt .brand-sub{color:#44536e!important;text-shadow:none!important;font-weight:700}
