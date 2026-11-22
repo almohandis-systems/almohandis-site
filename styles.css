@@ -884,3 +884,9 @@ body.lt .brand-name span{text-shadow:none!important}
 body.lt .brand-name .a{background:none!important;color:#a8760f!important;-webkit-text-fill-color:#a8760f!important}
 body.lt .brand-name .b{background:none!important;color:#14263f!important;-webkit-text-fill-color:#14263f!important}
 body.lt .brand-name{filter:drop-shadow(0 1px 1px rgba(18,32,56,.18))!important}
+
+
+/* c20 kill all wordmark doubling */
+body.lt .brand-name{text-shadow:none!important;transform:none!important}
+body.lt .brand-name :is(.a,.b){filter:none!important;text-shadow:none!important;transform:none!important}
+body.lt .brand-name{filter:drop-shadow(0 1px 1px rgba(18,32,56,.15))!important}
