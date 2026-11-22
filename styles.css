@@ -804,3 +804,16 @@ body:before{background-image:linear-gradient(rgba(99,152,222,.6) 1px,transparent
 .request-form input:focus,.request-form select:focus,.request-form textarea:focus{outline:none;border-color:var(--gold)}
 body.lt .request-form{background:linear-gradient(150deg,#ffffff,#f5f8fc);border-color:#dce4ee}
 body.lt .request-form input,body.lt .request-form select,body.lt .request-form textarea{background:#fff;color:#1c2a40;border-color:#cfd9e4}
+
+/* mobile overflow fix: clip horizontal spill at viewport and carousel */
+html,body{overflow-x:clip;max-width:100%}
+.carousel-shell{overflow:hidden}
+
+/* founder card moved out of hero into its own about section */
+.founder-sec{padding-top:6px;padding-bottom:30px;text-align:center}
+.founder-sec .section-head{margin-bottom:14px}
+.founder-sec .owner-mini{display:inline-flex;justify-self:center;margin:0 auto;padding:10px 18px 10px 12px;gap:12px;max-width:320px}
+.founder-sec .owner-mini .owner-photo{width:54px;height:54px;box-shadow:0 0 0 3px #e8c77914,0 5px 15px #0007}
+.founder-sec .owner-mini .owner-meta strong{font-size:12px}
+.founder-sec .owner-mini .owner-meta span{font-size:9.5px;margin-top:3px}
+.founder-sec .owner-mini .owner-meta small{font-size:8px}
