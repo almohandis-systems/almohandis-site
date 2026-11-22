@@ -916,3 +916,9 @@ body.lt .owner-card{padding:10px 14px!important;gap:10px!important;max-width:92%
 body.lt .owner-card .owner-avatar,body.lt .owner-card img{width:56px!important;height:56px!important}
 body.lt .carousel-wrap,body.lt .carousel-shell{margin:8px auto!important}
 }
+
+
+/* c24 clean project text surfaces */
+body.lt .work-card .work-body h3{color:#12223c!important;-webkit-text-fill-color:#12223c!important;background:#ffffff!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-radius:14px 14px 0 0!important;padding:10px 14px 2px!important;display:block!important;margin:0!important;font-size:20px!important;font-weight:900!important;text-shadow:none!important}
+body.lt .work-card .work-body p{color:#3c4c64!important;-webkit-text-fill-color:#3c4c64!important;background:#ffffff!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-radius:0 0 14px 14px!important;padding:2px 14px 10px!important;margin:0!important;font-size:16px!important;line-height:1.7!important;text-shadow:none!important}
+body.lt .work-card .price{color:#5a3a00!important;-webkit-text-fill-color:#5a3a00!important;background:#ffffff!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-radius:10px!important;padding:2px 12px!important;text-shadow:none!important}
