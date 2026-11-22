@@ -52,7 +52,7 @@ const WORK_ITEMS=[
 {name:'CRASH OS — منيو مطعم تفاعلي',desc:'منيو مطعم تفاعلي: طلبات وسلة وكود خصم، مع إمكانية تثبيته كتطبيق على الهاتف.',url:'https://almohandis-systems.github.io/Almohandis-menu/',img:'assets/work/crash-menu.webp'},
 {name:'LUSTER — متجر منتجات النظافة',desc:'متجر إلكتروني لمنتجات النظافة والعناية المنزلية، مع عروض وباقات وسلة شراء.',url:'https://almohandis-systems.github.io/LUSTER-YASSEN-/',img:'assets/work/luster.webp'},
 {name:'منظومة إدارة المطاعم الشاملة',desc:'منصة متكاملة لإدارة المطاعم: منيو، طلبات، كاشير، وتقارير في مكان واحد.',url:'https://almohandis-systems.github.io/crash-os-platform/',img:'assets/work/crash-os.webp'},
-{name:'رعاية الفيوم — شبكة خصومات طبية',desc:'موقع خدمات طبية بخصومات على الكشف والتحاليل، مع حجز سهل.',url:'https://almohandis-systems.github.io/reaya-fayoum/',img:'assets/work/reaya.webp'}
+{name:'رعاية الفيوم — شبكة خصومات طبية',desc:'دليل معتمد لشبكة أطباء وصيدليات ومعامل وأشعة بالفيوم بخصومات تصل إلى 30%، مع بطاقة عضوية رقمية عائلية حتى 5 أفراد بكود عضوية وباركود وتاريخ صلاحية، حاسبة توفير، حجز سهل، وصفحة «انضم كجهة» لانضمام الجهات الطبية.',url:'https://almohandis-systems.github.io/reaya-fayoum/',img:'assets/work/reaya.webp'}
 ];
 function openWork(i){const w=WORK_ITEMS[i];if(!w)return;play('open');document.getElementById('workTitle').textContent=workText(i,'name');document.getElementById('workOpen').href=w.url;const f=document.getElementById('workFrame');f.src=w.url;document.getElementById('workModal').classList.add('open');document.getElementById('workModal').setAttribute('aria-hidden','false');}
 function closeWork(){const m=document.getElementById('workModal');m.classList.remove('open');m.setAttribute('aria-hidden','true');document.getElementById('workFrame').src='about:blank';}
