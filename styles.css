@@ -776,3 +776,22 @@ h1,h2,h3{font-family:'Cairo',Arial,sans-serif}
 nav a,nav button{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);background:#ffffff0c;border-color:#ffffff1e}
 .tray-item,.chip{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .detail-cta{backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+
+/* homepage tagline */
+.hero-tagline{text-align:center;font-size:clamp(17px,2.7vw,25px);font-weight:800;color:#ecc87e;margin:16px auto 2px;text-shadow:0 2px 16px #0008;max-width:640px}
+
+/* subtle blueprint grid + calmer motion */
+body:before{background-image:linear-gradient(rgba(99,152,222,.6) 1px,transparent 1px),linear-gradient(90deg,rgba(99,152,222,.6) 1px,transparent 1px);opacity:.11}
+.brand-frame{--brand-speed:9s}
+.brand-frame.brand-float .brand-name{animation-duration:6.5s}
+.brand-frame.brand-pulse .brand-name{animation-duration:5s}
+.brand-frame.brand-rotate .brand-name{animation-duration:9s}
+
+/* compact founder strip inside hero copy */
+.hero{grid-template-columns:1fr;min-height:0}
+.hero .owner-mini{justify-self:start;margin-top:22px;max-width:none;padding:8px 16px 8px 10px;gap:10px}
+.hero .owner-mini .owner-photo{width:46px;height:46px;box-shadow:0 0 0 3px #e8c77914,0 5px 15px #0007}
+.hero .owner-mini .owner-meta strong{font-size:11.5px}
+.hero .owner-mini .owner-meta span{font-size:9.5px;margin-top:3px}
+.hero .owner-mini .owner-meta small{font-size:8px}
+@media(max-width:760px){.hero .owner-mini{justify-self:center}}
