@@ -1,11 +1,12 @@
 const STORE='almo_systems_content_v1', CFG='almo_systems_backend_v1';
 const DEFAULT={brand:'ALMOHANDIS - SYSTEMS',heroTitle:'من الفكرة إلى مشروع رقمي احترافي',heroDesc:'نصمم ونطور حلولاً رقمية ومشروعات متكاملة تساعدك على إطلاق فكرتك أو تطوير مشروعك القائم بثقة ووضوح.',ownerRole:'Software & Digital Solutions Engineer',ownerImage:'',phone:'01013376681',whatsapp:'96565704145',social:{facebook:'',instagram:'',tiktok:'',whatsapp:'https://wa.me/96565704145',youtube:'',linkedin:''},projects:[{id:'pr1',icon:'◈',name:'ENG. RAMI NABIL',desc:'التصميم والتطوير والحلول الرقمية المخصصة للأفراد والشركات.'},{id:'pr2',icon:'▣',name:'Digital Commerce',desc:'حلول المتاجر والمنصات وتجارب البيع الرقمية.'},{id:'pr3',icon:'⌘',name:'Business Systems',desc:'أنظمة الإدارة والأتمتة وربط العمليات.'}],products:(window.ALMO_SERVICES||[])};
 let state=load(),active=0,dragStart=null,dragDelta=0,showcaseTimer=null,backend=null,channel=null,soundOn=false,adminUser=null,adminTab='services',pendingEdit=null;
-function clone(x){return JSON.parse(JSON.stringify(x))}function load(){try{let x=JSON.parse(localStorage.getItem(STORE));return x&&Array.isArray(x.products)?{...clone(DEFAULT),...x}:clone(DEFAULT)}catch(e){return clone(DEFAULT)}}state.theme=state.theme||{preset:'pearl',motion:false};
+function clone(x){return JSON.parse(JSON.stringify(x))}function load(){try{let x=JSON.parse(localStorage.getItem(STORE));return x&&Array.isArray(x.products)?{...clone(DEFAULT),...x}:clone(DEFAULT)}catch(e){return clone(DEFAULT)}}state.theme=state.theme||{preset:'obsidian',motion:false};
 if(['201013376681','01013376681'].includes(String(state.whatsapp||'')))state.whatsapp='96565704145';if(state.social&&/201013376681/.test(state.social.whatsapp||''))state.social.whatsapp='https://wa.me/96565704145';
 state.style={titleAnim:'rise',headingColor:'',bodyColor:'',lightingMode:'gold',lightingColor:'#ffd36f',lightingIntensity:100,...(state.style||{})};
 state.branding={name:state.brand||'ALMOHANDIS - SYSTEMS',subtitle:'DIGITAL BUSINESS ECOSYSTEM',logoUrl:'',mode:'glass',animation:'sweep',colorA:'#b77b28',colorB:'#0b1628',frameWidth:75,...(state.branding||{})};
 try{let savedObj=JSON.parse(localStorage.getItem(STORE)||'{}');if(savedObj.branding){if(savedObj.branding.colorB==='#f4f6fa'||savedObj.branding.colorB==='#e8edf5')savedObj.branding.colorB='#091526';if(savedObj.branding.colorA==='#e7c779')savedObj.branding.colorA='#9a5806';state.branding={...state.branding,...savedObj.branding};}if(savedObj.style)state.style={...state.style,...savedObj.style};if(savedObj.theme)state.theme={...state.theme,...savedObj.theme}}catch(e){}
+if(state.theme&&['pearl','ice','ivory','sage','silver','blush','aurora','sky'].includes(state.theme.preset)&&!state.theme.custom)state.theme={...state.theme,preset:'obsidian'};
 function cfg(){try{return JSON.parse(localStorage.getItem(CFG)||'{}')}catch(e){return {}}}function activeCfg(){let local=cfg(),pub=window.ALMO_SUPABASE_CONFIG||{};return pub.url&&pub.key?pub:local}
 function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}function toast(s){let t=document.getElementById('toast');t.textContent=s;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2400)}function wa(){return 'https://wa.me/'+String(state.whatsapp||'96565704145').replace(/\D/g,'')}
 function priceNum(p){let n=String(p||'').replace(/[^0-9.]/g,'');return Number(n)||0}function money(n){return new Intl.NumberFormat('ar-EG',{maximumFractionDigits:0}).format(n)+' ج.م'}
@@ -446,19 +447,19 @@ function renderBrand(override){
   frame.style.setProperty('--brand-b-eff',effB);
   frame.style.setProperty('--brand-a-shadow',shadA);
   frame.style.setProperty('--brand-b-shadow',shadB);
-  if(name.children[0]){
+  if(name.children[0]&&mode!=='glass'){
     name.children[0].style.setProperty('color',effA,'important');
     name.children[0].style.setProperty('-webkit-text-fill-color',effA,'important');
     if(mode!=='2d')name.children[0].style.setProperty('text-shadow',shadA,'important');
   }
-  if(name.children[1]){
+  if(name.children[1]&&mode!=='glass'){
     name.children[1].style.setProperty('color',effB,'important');
     name.children[1].style.setProperty('-webkit-text-fill-color',effB,'important');
     if(mode!=='2d')name.children[1].style.setProperty('text-shadow',shadB,'important');
   }
   frame.className=frame.className.replace(/\s?brand-(2d|3d|sweep|float|pulse|rotate|spin3d|bounce|glow|glass)\b/g,'');
   if(mode==='2d')frame.classList.add('brand-2d');
-  else frame.classList.add('brand-3d');if(mode==='glass')frame.classList.add('brand-glass');
+  else if(mode!=='glass')frame.classList.add('brand-3d');if(mode==='glass')frame.classList.add('brand-glass');
   if(b.animation&&b.animation!=='none')frame.classList.add('brand-'+b.animation);
   const sub=document.getElementById('brandSubtitle');
   if(sub){sub.textContent=b.subtitle||'';sub.style.display=b.subtitle?'':'none';}
