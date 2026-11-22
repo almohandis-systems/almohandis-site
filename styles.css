@@ -940,3 +940,7 @@ html body.lt footer :is(.foot-brand,.brand,strong,b,.logo-text){font-size:26px!i
 body.lt footer a{font-size:17px!important;font-weight:800!important}
 body.lt .footer .wrap>div{font-size:16px!important;line-height:1.7!important;padding:4px 70px 4px 8px!important}
 body.lt footer,body.lt .footer{padding-bottom:84px!important}
+
+
+/* c27 video buttons on dark media */
+body.lt .demo-badge,body.lt .demo-play span,body.lt .demo-play{background:rgba(9,18,34,.78)!important;color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;text-shadow:none!important;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);border-radius:12px!important;padding:6px 14px!important}
