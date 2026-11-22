@@ -16,11 +16,11 @@ svc:{
  p12:{name:'Custom Software Solutions',desc:'Turning your own idea into a digital product designed around your needs.',price:'On request',details:'If your idea does not fit a ready-made service, we start with a session to understand the problem, the users, and the required functions, then define the scope, phase plan, cost, and estimated timeline.',features:['Idea analysis session','Scope and priority definition','Initial solution concept','Technical and financial proposal','Phased, scalable implementation']}
 },
 work:[
- {name:'MOHANDIS MENU — An Upgraded Restaurant Menu',desc:'A mobile restaurant menu: sections and dish photos, combo suggestions, size customization, and an order cart.'},
- {name:'CRASH OS — Interactive Restaurant Menu',desc:'A complete digital restaurant menu: orders, cart, tables, and installable as a phone app.'},
+ {name:'MOHANDIS MENU — An Upgraded Restaurant Menu',desc:'A mobile restaurant menu: sections and dish photos, combo suggestions, size customization, and an order cart sent to WhatsApp.'},
+ {name:'CRASH OS — Interactive Restaurant Menu',desc:'An interactive restaurant menu: orders, cart, discount code, and installable as a phone app.'},
  {name:'LUSTER — Cleaning Products Store',desc:'An online store for cleaning and home-care products, with offers, bundles, and a shopping cart.'},
  {name:'Complete Restaurant Management Suite',desc:'An integrated restaurant platform: menu, orders, cashier, and reports in one place.'},
- {name:'Reaya Fayoum — Medical Discount Network',desc:'A digital medical directory with a membership card: clinics, labs, pharmacies, radiology, and discount details.'}
+ {name:'Reaya Fayoum — Medical Discount Network',desc:'A medical services site with discounts on checkups and tests, and easy booking.'}
 ],
 ui:{
   detailEyebrow:'SERVICE DETAILS',orderNow:'Order this service now',backToServices:'Back to services',
@@ -56,7 +56,8 @@ window.ALMO_EN_STATIC={
  contactTitle:'Contact us',
  footer:'ALMOHANDIS - SYSTEMS. All rights reserved.',
  detailBackTop:'Back to services ×',
- installIosT:'Install the app on iPhone',installIos1:'1. Tap the share button at the bottom of Safari.',installIos2:'2. Choose "Add to Home Screen".',installIos3:'3. Tap "Add" at the top right.',
+ installIosT:'Install the app on iPhone',
+ tagline:'Your idea becomes a company. We build it into an app.',installIos1:'1. Tap the share button at the bottom of Safari.',installIos2:'2. Choose "Add to Home Screen".',installIos3:'3. Tap "Add" at the top right.',
  installTitle:'📲 Install the ALMOHANDIS app',installLead:'To install the app with its official icon directly on your home screen:'
 };
 /* ===== i18n runtime ===== */
@@ -86,7 +87,8 @@ const I18N_MAP=[
  ['why3t','قابلية التطوير والتوسع'],['why3d','نبني التجربة مع مراعاة احتياجات المشروع الحالية وإمكانية إضافة مراحل وخدمات لاحقاً.'],
  ['contactTitle','تواصل معنا'],['footer','ALMOHANDIS - SYSTEMS. جميع الحقوق محفوظة.'],
  ['detailBackTop','رجوع إلى الخدمات ×'],
- ['installIosT','تثبيت التطبيق على iPhone']
+ ['installIosT','تثبيت التطبيق على iPhone'],
+ ['tagline','فكرتك تبقى شركة. نبنيها لك تطبيق.']
 ];
 const I18N_ORIG=new WeakMap();
 function i18nSwap(toEn){
