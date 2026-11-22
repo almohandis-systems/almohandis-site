@@ -966,3 +966,81 @@ html body.lt .footer .wrap>strong[data-keepfx]{font-size:clamp(19px,5.6vw,26px)!
 
 html body.lt #brandFrame .brand-name{font-size:clamp(19px,5.4vw,24px)!important}
 html body.lt #brandFrame .brand-name :is(span.a,span.b){background-image:none!important;color:#122c5a!important;-webkit-text-fill-color:#122c5a!important;text-shadow:0 -1px 1px rgba(255,255,255,.6),0 1px 0 #0b1e42,0 2px 0 #0a1b3b,0 3px 0 #081731,0 4px 0 #061228,0 6px 3px rgba(6,14,30,.5)!important}
+
+/* ==========================================================
+   CINEMATIC LUXURY UPGRADE v40 (Nov 2026)
+   Real cinematic imagery, glass depth, interactive buttons.
+   Dark theme only (body:not(.lt)); light owner presets keep
+   their clean light look. Purely visual: no content changes.
+   ========================================================== */
+body:not(.lt){
+  background:linear-gradient(180deg,rgba(7,11,19,.60),rgba(7,11,19,.76) 45%,rgba(7,11,19,.90)),url("assets/cine/texture-silk.webp") center/cover no-repeat fixed,#070b13!important;
+}
+::selection{background:#e8c779;color:#17130b}
+body:not(.lt)::-webkit-scrollbar{width:11px}
+body:not(.lt)::-webkit-scrollbar-track{background:#080c13}
+body:not(.lt)::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#caa155,#7a5a22);border-radius:8px;border:2px solid #080c13}
+
+/* Brand frame: deep glass */
+body:not(.lt) .brand-frame{background:linear-gradient(120deg,rgba(20,32,52,.72),rgba(10,17,30,.62))!important;border-color:rgba(232,199,121,.42)!important;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 24px 70px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.08)!important}
+
+/* Nav: floating glass pills */
+body:not(.lt) nav a,body:not(.lt) nav button{border:1px solid rgba(232,199,121,.22)!important;background:rgba(13,20,32,.55)!important;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:999px!important;transition:transform .25s,border-color .25s,color .25s,box-shadow .25s,background .25s!important}
+body:not(.lt) nav a:hover,body:not(.lt) nav button:hover{border-color:rgba(255,211,111,.65)!important;color:#ffd36f!important;background:rgba(24,36,58,.82)!important;transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.45)}
+
+/* Hero: cinematic backdrop */
+body:not(.lt) .hero{
+  background:linear-gradient(to left,rgba(7,11,19,.94) 22%,rgba(7,11,19,.62) 55%,rgba(7,11,19,.30)),url("assets/cine/hero-cinematic.webp") center 32%/cover no-repeat!important;
+  border:1px solid rgba(232,199,121,.30);
+  border-radius:30px;
+  box-shadow:0 44px 120px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.07);
+  margin:20px auto 6px;
+  padding:64px 5% 68px;
+  overflow:hidden;
+}
+body:not(.lt) .hero-copy>*{animation:heroRise .9s cubic-bezier(.16,1,.3,1) both}
+body:not(.lt) .hero-copy>*:nth-child(2){animation-delay:.08s}
+body:not(.lt) .hero-copy>*:nth-child(3){animation-delay:.16s}
+body:not(.lt) .hero-copy>*:nth-child(4){animation-delay:.24s}
+@keyframes heroRise{from{opacity:0;transform:translateY(24px)}}
+body:not(.lt) .hero-tagline{background:linear-gradient(100deg,#fff2c9,#e8c779 45%,#fff0bd 70%,#caa155);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none!important;filter:drop-shadow(0 3px 14px rgba(0,0,0,.55))}
+
+/* Glass panels */
+body:not(.lt) :is(.detail-preview,.feature,.project,.estimate,.request-form,.info-panel){
+  background:rgba(13,20,32,.62)!important;
+  backdrop-filter:blur(14px) saturate(1.25);
+  -webkit-backdrop-filter:blur(14px) saturate(1.25);
+  border:1px solid rgba(232,199,121,.20)!important;
+  box-shadow:0 26px 70px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.05)!important;
+}
+body:not(.lt) .feature{transition:transform .35s cubic-bezier(.16,1,.3,1),border-color .3s,box-shadow .35s}
+body:not(.lt) .feature:hover{transform:translateY(-6px);border-color:rgba(255,211,111,.55)!important;box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 44px rgba(255,211,111,.14)!important}
+body:not(.lt) .service-card.active{box-shadow:0 42px 100px rgba(0,0,0,.65),0 0 70px rgba(255,211,111,.20),inset 0 1px rgba(255,255,255,.25)!important}
+body:not(.lt) .work-card:hover,body:not(.lt) .work-card:focus-visible{box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 48px rgba(232,199,121,.22)!important}
+
+/* Builder: cinematic CTA band */
+body:not(.lt) .builder{
+  background:linear-gradient(180deg,rgba(8,12,20,.88),rgba(8,12,20,.80)),url("assets/cine/cta-cinematic.webp") center 40%/cover no-repeat!important;
+  border:1px solid rgba(232,199,121,.4)!important;
+  box-shadow:0 34px 100px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.06)!important;
+}
+
+/* Buttons: sheen sweep, lift, press */
+body:not(.lt) .btn{position:relative;overflow:hidden;transition:transform .28s cubic-bezier(.2,.8,.2,1),box-shadow .3s,border-color .3s,filter .3s,background .3s!important}
+body:not(.lt) .btn:hover{transform:translateY(-3px)}
+body:not(.lt) .btn:active{transform:translateY(-1px) scale(.98)}
+body:not(.lt) .btn:after{content:"";position:absolute;top:0;bottom:0;width:45%;left:-70%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.34),transparent);transform:skewX(-18deg);transition:left .55s ease;pointer-events:none}
+body:not(.lt) .btn:hover:after{left:125%}
+body:not(.lt) .btn.primary{box-shadow:0 10px 34px rgba(212,170,87,.35),inset 0 1px 0 rgba(255,255,255,.35)!important}
+body:not(.lt) .btn.primary:hover{box-shadow:0 16px 46px rgba(255,211,111,.45),inset 0 1px 0 rgba(255,255,255,.4)!important;filter:brightness(1.07)}
+body:not(.lt) .btn:focus-visible{outline:2px solid #ffd36f;outline-offset:2px}
+
+/* Scroll reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+.rv.rv-in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1!important;transform:none!important}}
+
+@media(max-width:760px){
+  body:not(.lt){background-attachment:scroll!important}
+  body:not(.lt) .hero{padding:44px 6% 48px;border-radius:22px}
+}

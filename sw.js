@@ -1,7 +1,7 @@
 /* ALMOHANDIS - SYSTEMS: offline + fast repeat visits.
    HTML: network-first (fresh content wins, cache is the offline fallback).
    Static assets: cache-first (they change only with a deploy, which bumps CACHE). */
-const CACHE = 'almo-systems-v39';
+const CACHE = 'almo-systems-v40';
 const ASSETS = [
   './',
   'index.html',
@@ -11,7 +11,10 @@ const ASSETS = [
   'manifest.json',
   'assets/icon-192.png',
   'assets/icon-512.png',
-  'assets/owner-photo.webp'
+  'assets/owner-photo.webp',
+  'assets/cine/hero-cinematic.webp',
+  'assets/cine/texture-silk.webp',
+  'assets/cine/cta-cinematic.webp'
 ];
 
 self.addEventListener('install', (e) => {
