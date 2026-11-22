@@ -922,3 +922,13 @@ body.lt .carousel-wrap,body.lt .carousel-shell{margin:8px auto!important}
 body.lt .work-card .work-body h3{color:#12223c!important;-webkit-text-fill-color:#12223c!important;background:#ffffff!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-radius:14px 14px 0 0!important;padding:10px 14px 2px!important;display:block!important;margin:0!important;font-size:20px!important;font-weight:900!important;text-shadow:none!important}
 body.lt .work-card .work-body p{color:#3c4c64!important;-webkit-text-fill-color:#3c4c64!important;background:#ffffff!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-radius:0 0 14px 14px!important;padding:2px 14px 10px!important;margin:0!important;font-size:16px!important;line-height:1.7!important;text-shadow:none!important}
 body.lt .work-card .price{color:#5a3a00!important;-webkit-text-fill-color:#5a3a00!important;background:#ffffff!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-radius:10px!important;padding:2px 12px!important;text-shadow:none!important}
+
+
+/* c25 global flat readable light theme */
+html body.lt :is(header,main,footer) :is(h1,h2,h3,h4,h5,p,span,a,small,label,strong,em,li,button,div){text-shadow:none!important;-webkit-text-stroke:0!important}
+html body.lt :is(header,main,footer) :is(.feature,.ref-card,.info-panel,.wa-card,.service-card,.detail-preview,.estimate,.work-card,.confirm-card) :is(h1,h2,h3,h4,p,span,strong,small,label,li){color:#243044!important;-webkit-text-fill-color:#243044!important;background-image:none!important;text-shadow:none!important}
+html body.lt :is(header,main,footer) :is(.feature,.ref-card,.info-panel,.wa-card,.service-card,.detail-preview,.estimate,.confirm-card) :is(h1,h2,h3,h4,strong){color:#0f1b33!important;-webkit-text-fill-color:#0f1b33!important}
+html body.lt :is(header,main,footer) :is(.price,.detail-price,.est-total,.cart-total){color:#5a3a00!important;-webkit-text-fill-color:#5a3a00!important;font-weight:900!important;text-shadow:none!important;background-image:none!important}
+body.lt .work-card .work-body h3{color:#12223c!important;-webkit-text-fill-color:#12223c!important}
+body.lt :is(.feature p,.ref-card p,.service-card p,.work-body p){font-size:16px;line-height:1.7}
+body.lt .orb span,body.lt .svc-ic{text-shadow:none!important}
