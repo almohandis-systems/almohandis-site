@@ -1,7 +1,7 @@
 /* ALMOHANDIS - SYSTEMS: offline + fast repeat visits.
    HTML: network-first (fresh content wins, cache is the offline fallback).
    Static assets: cache-first (they change only with a deploy, which bumps CACHE). */
-const CACHE = 'almo-systems-v10';
+const CACHE = 'almo-systems-v11';
 const ASSETS = [
   './',
   'index.html',
