@@ -876,7 +876,7 @@ function refBaseUrl(){
   if(/^https?:\/\//.test(cfgUrl))return cfgUrl;
   if(/^https?:/.test(location.protocol))return location.href.split('?')[0].split('#')[0];
   if(document.referrer&&/^https?:\/\//.test(document.referrer))return document.referrer.split('?')[0].split('#')[0];
-  return 'https://almohandis-systems.github.io/';
+  return 'https://almohandis-systems.github.io/almohandis-site/';
 }
 function refLink(){
   const base=refBaseUrl();
