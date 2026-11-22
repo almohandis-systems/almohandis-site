@@ -878,3 +878,9 @@ body.lt #brandFrame.brand-frame{background:none!important;border:none!important;
 body.lt .brand-name :is(.a,.b){text-shadow:none!important;-webkit-text-stroke:0!important}
 body.lt .brand-name span{text-shadow:none!important}
 @media(max-width:480px){body.lt .service-card .hint{font-size:12px}body.lt .service-card .index{font-size:11px}body.lt .work-body p{font-size:13.5px}body.lt .brand-sub{font-size:10px}body.lt .hero-tagline{font-size:19px}}
+
+
+/* c19 solid crisp wordmark letters */
+body.lt .brand-name .a{background:none!important;color:#a8760f!important;-webkit-text-fill-color:#a8760f!important}
+body.lt .brand-name .b{background:none!important;color:#14263f!important;-webkit-text-fill-color:#14263f!important}
+body.lt .brand-name{filter:drop-shadow(0 1px 1px rgba(18,32,56,.18))!important}
