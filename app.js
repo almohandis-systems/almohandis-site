@@ -250,7 +250,7 @@ function openDetail(id){
   const link=wa()+'?text='+msg;
   document.getElementById('detailBody').innerHTML=
     '<div class="detail-hero">'+
-      '<div class="detail-emblem">'+esc(p.icon||'✦')+'</div>'+
+      '<div class="detail-emblem">'+artSvg(p,state.products.indexOf(p))+'</div>'+
       '<div>'+
         '<div class="eyebrow">تفاصيل الخدمة</div>'+
         '<h1>'+esc(p.name)+'</h1>'+
