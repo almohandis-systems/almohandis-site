@@ -1113,3 +1113,31 @@ render();initBackend();startShowcase();if(location.hash.startsWith('#service-'))
     window.open(wa()+'?text='+encodeURIComponent(msg),'_blank','noopener');
   });
 })();
+
+/* c26 runtime auto-contrast (light theme) */
+(function(){
+  const NB='#0b1220',WH='#ffffff';
+  function pr(c){if(!c)return null;const m=c.match(/rgba?\(([^)]+)\)/);if(!m)return null;const p=m[1].split(',').map(parseFloat);if(p.length>3&&p[3]===0)return null;return p;}
+  function hx(h){return [parseInt(h.substr(1,2),16),parseInt(h.substr(3,2),16),parseInt(h.substr(5,2),16)];}
+  function lum(p){const f=v=>{v/=255;return v<=0.03928?v/12.92:Math.pow((v+0.055)/1.055,2.4)};return 0.2126*f(p[0])+0.7152*f(p[1])+0.0722*f(p[2]);}
+  function effBg(el){let e=el;while(e&&e.nodeType===1){const cs=getComputedStyle(e);const p=pr(cs.backgroundColor);if(p)return p;const bi=cs.backgroundImage;if(bi&&bi!=='none'){if(bi.indexOf('url(')>-1)return [10,16,28];const m=bi.match(/#[0-9a-fA-F]{6}|rgba?\([^)]*\)/);if(m){const c=m[0][0]==='#'?hx(m[0]):pr(m[0]);if(c)return c;}return [245,247,251];}e=e.parentElement;}return [245,247,251];}
+  function cr(a,b){const x=Math.max(a,b),y=Math.min(a,b);return (x+0.05)/(y+0.05);}
+  const LB=lum([11,18,32]),LW=lum([255,255,255]);
+  function hasText(el){for(const n of el.childNodes){if(n.nodeType===3&&n.textContent.trim())return true;}return el.children.length===0&&el.textContent.trim().length>0;}
+  function fix(){if(!document.body.classList.contains('lt'))return;
+    document.querySelectorAll('header,main,footer').forEach(root=>{
+      root.querySelectorAll('*').forEach(el=>{
+        if(!hasText(el))return;
+        const L=lum(effBg(el));
+        const col=cr(L,LB)>=cr(L,LW)?NB:WH;
+        el.style.setProperty('color',col,'important');
+        el.style.setProperty('-webkit-text-fill-color',col,'important');
+        el.style.setProperty('text-shadow','none','important');
+      });
+    });
+  }
+  window.__autoContrast=fix;
+  fix();setTimeout(fix,900);
+  new MutationObserver(m=>{for(const r of m){if(r.attributeName==='class'){fix();break;}}}).observe(document.body,{attributes:true,attributeFilter:['class']});
+  window.addEventListener('resize',()=>fix());
+})();
