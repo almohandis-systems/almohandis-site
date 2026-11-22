@@ -868,3 +868,13 @@ body.lt .brand-name{filter:drop-shadow(0 1px 2px rgba(18,32,56,.22))!important;t
 body.lt .brand-name span{text-shadow:none!important;transform:none!important}
 body.lt .service-card h3{transform:none!important}
 body.lt .service-card .price,body.lt .service-card .hint{transform:none!important}
+
+
+/* c18 fill resets + frameless wordmark + scrims + phone font floor */
+body.lt .service-card h3,body.lt .work-body h3,body.lt .work-body p,body.lt .detail-preview h3,body.lt .detail-preview p,body.lt .service-card .price,body.lt .service-card .hint,body.lt .service-card .index,body.lt .hero-tagline,body.lt .section-head h2,body.lt .section-head p,body.lt .hero h1,body.lt .hero p,body.lt .brand-sub,body.lt label,body.lt small{-webkit-text-fill-color:currentColor!important}
+body.lt .work-card .work-body h3{color:#fff!important;-webkit-text-fill-color:#fff!important;background:rgba(9,18,34,.55);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);border-radius:10px;padding:3px 12px;display:inline-block}
+body.lt .work-card .work-body p{color:#f2f6fc!important;-webkit-text-fill-color:#f2f6fc!important;background:rgba(9,18,34,.45);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);border-radius:10px;padding:4px 12px}
+body.lt #brandFrame.brand-frame{background:none!important;border:none!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;padding:4px 4px 2px!important}
+body.lt .brand-name :is(.a,.b){text-shadow:none!important;-webkit-text-stroke:0!important}
+body.lt .brand-name span{text-shadow:none!important}
+@media(max-width:480px){body.lt .service-card .hint{font-size:12px}body.lt .service-card .index{font-size:11px}body.lt .work-body p{font-size:13.5px}body.lt .brand-sub{font-size:10px}body.lt .hero-tagline{font-size:19px}}
