@@ -1,23 +1,10 @@
 const STORE='almo_systems_content_v1', CFG='almo_systems_backend_v1';
-const DEFAULT={brand:'ALMOHANDIS - SYSTEMS',heroTitle:'من الفكرة إلى مشروع رقمي احترافي',heroDesc:'نصمم ونطور حلولاً رقمية ومشروعات متكاملة تساعدك على إطلاق فكرتك أو تطوير مشروعك القائم بثقة ووضوح.',ownerRole:'Software & Digital Solutions Engineer',ownerImage:'',phone:'01013376681',whatsapp:'96565704145',social:{facebook:'',instagram:'',tiktok:'',whatsapp:'https://wa.me/96565704145',youtube:'',linkedin:''},projects:[{id:'pr1',icon:'◈',name:'ENG. RAMI NABIL',desc:'التصميم والتطوير والحلول الرقمية المخصصة للأفراد والشركات.'},{id:'pr2',icon:'▣',name:'Digital Commerce',desc:'حلول المتاجر والمنصات وتجارب البيع الرقمية.'},{id:'pr3',icon:'⌘',name:'Business Systems',desc:'أنظمة الإدارة والأتمتة وربط العمليات.'}],products:[
-{id:'p1',name:'تصميم وتطوير المواقع',desc:'مواقع شركات وأعمال وصفحات هبوط سريعة ومتجاوبة تعكس هوية نشاطك.',price:'من 3,500 ج.م',icon:'🌐',details:'نصمم موقعاً احترافياً متجاوباً مع الهاتف والكمبيوتر، بهيكل واضح وتجربة استخدام تساعد الزائر على فهم خدماتك والتواصل معك. يشمل العمل تحديد الصفحات، بناء الواجهة، ضبط العرض على الشاشات المختلفة، وتجهيز ملفات النشر وفق نطاق المشروع.',features:['تصميم متجاوب لجميع الشاشات','صفحات مخصصة حسب النشاط','تحسين تجربة المستخدم وسهولة التصفح','تهيئة أساسية لمحركات البحث','تجهيز للنشر وربط النطاق حسب الاتفاق'],visible:true},
-{id:'p2',name:'المتاجر الإلكترونية',desc:'متجر منظم لعرض المنتجات وإدارة الطلبات وتجربة شراء سهلة.',price:'من 6,500 ج.م',icon:'🛍️',details:'إنشاء واجهة متجر إلكتروني تشمل تصنيفات المنتجات وصفحات التفاصيل وسلة الشراء ومسار الطلب. يتم تحديد بوابة الدفع والشحن وإدارة المخزون حسب المنصة والبلد والمتطلبات الفعلية.',features:['تصنيفات وصفحات منتجات','سلة شراء ومسار طلب','تصميم متجاوب','إعداد صفحات السياسات والتواصل','قابلية ربط الدفع والشحن حسب المتاح'],visible:true},
-{id:'p3',name:'تطبيقات الهاتف',desc:'تطبيقات Android وiOS بتجربة استخدام عصرية وفق نطاق واضح.',price:'من 15,000 ج.م',icon:'📱',details:'نبدأ بتحديد فكرة التطبيق والجمهور والوظائف الأساسية، ثم تخطيط تجربة الاستخدام وتصميم الشاشات وتطوير الوظائف والاختبار. التكلفة النهائية تعتمد على عدد الشاشات والتكاملات وطبيعة التطبيق.',features:['تحليل المتطلبات وتحديد النطاق','تصميم واجهات وتجربة استخدام','تطوير الوظائف الأساسية','اختبارات قبل التسليم','خطة تطوير مستقبلية'],visible:true},
-{id:'p4',name:'تصميم UI / UX',desc:'واجهات واضحة وجذابة وتجربة استخدام تسهّل الوصول إلى الهدف.',price:'من 2,000 ج.م',icon:'🎨',details:'تصميم تجربة المستخدم يبدأ بفهم الجمهور والمهام الأساسية، ثم تنظيم تدفق الاستخدام وإنشاء النماذج الأولية ونظام بصري متناسق يمكن تسليمه لفريق التطوير.',features:['تحليل رحلة المستخدم','هيكلة الصفحات والتدفقات','نماذج أولية تفاعلية','نظام ألوان وخطوط ومكونات','ملفات تسليم منظمة'],visible:true},
-{id:'p5',name:'أنظمة الإدارة والأعمال',desc:'لوحات تحكم لتنظيم العمليات والبيانات ومتابعة الأداء.',price:'من 10,000 ج.م',icon:'⚙️',details:'تطوير نظام إدارة يتناسب مع سير العمل الفعلي، ويجمع البيانات والمهام والتقارير في واجهة منظمة. يتم تحديد الوحدات والصلاحيات وفق احتياج المؤسسة.',features:['لوحة تحكم مركزية','إدارة المستخدمين والصلاحيات','نماذج وعمليات مخصصة','تقارير ومؤشرات متابعة','إمكانية إضافة وحدات لاحقاً'],visible:true},
-{id:'p6',name:'أنظمة CRM و ERP',desc:'تنظيم العملاء والمبيعات والمخزون والعمليات في نظام واحد.',price:'من 25,000 ج.م',icon:'📊',details:'تحليل عمليات النشاط وربط الوحدات المناسبة مثل العملاء والمبيعات والمشتريات والمخزون والموارد والتقارير. يحدد السعر وفق عدد الوحدات والتكاملات وترحيل البيانات.',features:['إدارة بيانات العملاء','متابعة المبيعات والفرص','تنظيم المخزون والعمليات','تقارير تشغيلية','صلاحيات وسجل نشاط'],visible:true},
-{id:'p7',name:'حلول الأتمتة والتكامل',desc:'تقليل الأعمال المتكررة وربط الأدوات والخدمات لتسهيل التشغيل.',price:'من 4,000 ج.م',icon:'⟲',details:'تحليل المهام المتكررة داخل المشروع وتصميم تدفقات عمل تربط النماذج والجداول وأنظمة العملاء والإشعارات والخدمات الرقمية. يتم تحديد حدود الأتمتة ومصادر البيانات قبل التنفيذ.',features:['تحليل سير العمل','ربط الأنظمة والخدمات','أتمتة المهام المتكررة','إشعارات وتحديثات آلية','توثيق طريقة التشغيل'],visible:true},
-{id:'p8',name:'منيوهات رقمية وتجارب 3D',desc:'منيوهات تفاعلية للأقسام والخدمات والمنتجات مع تجربة عرض مميزة.',price:'من 2,500 ج.م',icon:'🧊',details:'تصميم منيو رقمي يتضمن أقساماً ومنتجات وأسعاراً وصوراً، مع تجربة تفاعلية ثلاثية الأبعاد وإدارة للمحتوى بحسب البنية التقنية المتفق عليها.',features:['عرض أقسام ومنتجات تفاعلي','إدارة الأسعار والوصف','تصميم متجاوب وQR','صفحات تفاصيل لكل عنصر','إمكانية ربط الطلبات حسب النطاق'],visible:true},
-{id:'p9',name:'الهوية البصرية',desc:'هوية متناسقة تعكس شخصية مشروعك وتوحّد ظهوره.',price:'من 1,500 ج.م',icon:'✦',details:'بناء نظام بصري مناسب لطبيعة النشاط يشمل الشعار والألوان والخطوط وقواعد الاستخدام، مع ملفات تسليم واضحة للاستخدام الرقمي والمطبوع حسب الباقة.',features:['تصميم أو تطوير الشعار','لوحة ألوان وخطوط','قواعد استخدام الهوية','تطبيقات بصرية أساسية','ملفات تسليم مناسبة'],visible:true},
-{id:'p10',name:'قواعد البيانات وواجهات الربط',desc:'بنية بيانات وربط الأنظمة والخدمات بطريقة منظمة.',price:'من 3,000 ج.م',icon:'🗄️',details:'تصميم هيكل البيانات والعلاقات والصلاحيات وواجهات الربط بين الأنظمة، مع مراعاة الأمان وقابلية الصيانة والتوسع.',features:['تصميم مخطط البيانات','تنظيم العلاقات والفهارس','واجهات API موثقة','ضبط الصلاحيات','اختبارات التكامل'],visible:true},
-{id:'p11',name:'الصيانة والتطوير',desc:'تحسين الأداء وإصلاح الأخطاء وإضافة وظائف جديدة.',price:'من 500 ج.م',icon:'🛠️',details:'فحص المشروع وتحديد الأولويات ثم تنفيذ الإصلاحات والتحديثات والتحسينات وفق ساعات عمل أو نطاق متفق عليه، مع توضيح ما يشمله الدعم.',features:['فحص فني للمشروع','إصلاح أخطاء محددة','تحسين السرعة والتوافق','تحديثات وتطوير وظائف','تقرير بالتغييرات المنفذة'],visible:true},
-{id:'p12',name:'حلول برمجية مخصصة',desc:'تحويل فكرة خاصة إلى منتج رقمي مصمم حسب احتياجاتك.',price:'حسب الطلب',icon:'🚀',details:'إذا كانت فكرتك لا تناسب خدمة جاهزة، نبدأ بجلسة لفهم المشكلة والمستخدمين والوظائف المطلوبة، ثم نحدد النطاق وخطة المراحل والتكلفة والجدول التقديري.',features:['جلسة تحليل الفكرة','تحديد النطاق والأولويات','تصور أولي للحل','عرض فني ومالي','تنفيذ مرحلي قابل للتوسع'],visible:true}
-]};
+const DEFAULT={brand:'ALMOHANDIS - SYSTEMS',heroTitle:'من الفكرة إلى مشروع رقمي احترافي',heroDesc:'نصمم ونطور حلولاً رقمية ومشروعات متكاملة تساعدك على إطلاق فكرتك أو تطوير مشروعك القائم بثقة ووضوح.',ownerRole:'Software & Digital Solutions Engineer',ownerImage:'',phone:'01013376681',whatsapp:'96565704145',social:{facebook:'',instagram:'',tiktok:'',whatsapp:'https://wa.me/96565704145',youtube:'',linkedin:''},projects:[{id:'pr1',icon:'◈',name:'ENG. RAMI NABIL',desc:'التصميم والتطوير والحلول الرقمية المخصصة للأفراد والشركات.'},{id:'pr2',icon:'▣',name:'Digital Commerce',desc:'حلول المتاجر والمنصات وتجارب البيع الرقمية.'},{id:'pr3',icon:'⌘',name:'Business Systems',desc:'أنظمة الإدارة والأتمتة وربط العمليات.'}],products:(window.ALMO_SERVICES||[])};
 let state=load(),active=0,dragStart=null,dragDelta=0,showcaseTimer=null,backend=null,channel=null,soundOn=false,adminUser=null,adminTab='services',pendingEdit=null;
 function clone(x){return JSON.parse(JSON.stringify(x))}function load(){try{let x=JSON.parse(localStorage.getItem(STORE));return x&&Array.isArray(x.products)?{...clone(DEFAULT),...x}:clone(DEFAULT)}catch(e){return clone(DEFAULT)}}state.theme=state.theme||{preset:'pearl',motion:false};
 if(['201013376681','01013376681'].includes(String(state.whatsapp||'')))state.whatsapp='96565704145';if(state.social&&/201013376681/.test(state.social.whatsapp||''))state.social.whatsapp='https://wa.me/96565704145';
 state.style={titleAnim:'rise',headingColor:'',bodyColor:'',lightingMode:'gold',lightingColor:'#ffd36f',lightingIntensity:100,...(state.style||{})};
-state.branding={name:state.brand||'ALMOHANDIS - SYSTEMS',subtitle:'DIGITAL BUSINESS ECOSYSTEM',logoUrl:'',mode:'3d',animation:'sweep',colorA:'#b77b28',colorB:'#0b1628',frameWidth:75,...(state.branding||{})};
+state.branding={name:state.brand||'ALMOHANDIS - SYSTEMS',subtitle:'DIGITAL BUSINESS ECOSYSTEM',logoUrl:'',mode:'glass',animation:'sweep',colorA:'#b77b28',colorB:'#0b1628',frameWidth:75,...(state.branding||{})};
 try{let savedObj=JSON.parse(localStorage.getItem(STORE)||'{}');if(savedObj.branding){if(savedObj.branding.colorB==='#f4f6fa'||savedObj.branding.colorB==='#e8edf5')savedObj.branding.colorB='#091526';if(savedObj.branding.colorA==='#e7c779')savedObj.branding.colorA='#9a5806';state.branding={...state.branding,...savedObj.branding};}if(savedObj.style)state.style={...state.style,...savedObj.style};if(savedObj.theme)state.theme={...state.theme,...savedObj.theme}}catch(e){}
 function cfg(){try{return JSON.parse(localStorage.getItem(CFG)||'{}')}catch(e){return {}}}function activeCfg(){let local=cfg(),pub=window.ALMO_SUPABASE_CONFIG||{};return pub.url&&pub.key?pub:local}
 function esc(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}function toast(s){let t=document.getElementById('toast');t.textContent=s;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2400)}function wa(){return 'https://wa.me/'+String(state.whatsapp||'96565704145').replace(/\D/g,'')}
@@ -209,6 +196,7 @@ const ICON_PATHS={
  maint:'<circle cx="8" cy="-8" r="12"/><path d="M-2 2L-18 18L-22 14L-6 -2"/>',
  custom:'<path d="M0 -24C10 -14 12 0 10 12L0 22L-10 12C-12 0 -10 -14 0 -24Z"/><circle cx="0" cy="-4" r="4"/><path d="M-10 12L-18 20M10 12L18 20"/>'
 };
+function svcIc(p){const k=(typeof SVC_ICON==='object'&&SVC_ICON[p.id]);const d=k&&ICON_PATHS[k];return d?'<span class="svc-ic"><svg viewBox="-24 -24 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+d+'</svg></span>':esc(p.icon||'')+' ';}
 function artSvgLegacy(p,i){
   const key=SVC_ICON[p.id]||'custom';
   const g=ICON_PATHS[key]||ICON_PATHS.custom;
@@ -468,9 +456,9 @@ function renderBrand(override){
     name.children[1].style.setProperty('-webkit-text-fill-color',effB,'important');
     if(mode!=='2d')name.children[1].style.setProperty('text-shadow',shadB,'important');
   }
-  frame.className=frame.className.replace(/\s?brand-(2d|3d|sweep|float|pulse|rotate|spin3d|bounce|glow)\b/g,'');
+  frame.className=frame.className.replace(/\s?brand-(2d|3d|sweep|float|pulse|rotate|spin3d|bounce|glow|glass)\b/g,'');
   if(mode==='2d')frame.classList.add('brand-2d');
-  else frame.classList.add('brand-3d');
+  else frame.classList.add('brand-3d');if(mode==='glass')frame.classList.add('brand-glass');
   if(b.animation&&b.animation!=='none')frame.classList.add('brand-'+b.animation);
   const sub=document.getElementById('brandSubtitle');
   if(sub){sub.textContent=b.subtitle||'';sub.style.display=b.subtitle?'':'none';}
@@ -636,6 +624,7 @@ function adminBranding(p){
     '<div class="field"><label>طريقة العرض</label><select id="brMode">'+
       '<option value="2d"'+(curMode==='2d'?' selected':'')+'>نص مسطح</option>'+
       '<option value="3d"'+(curMode==='3d'?' selected':'')+'>نص ثلاثي الأبعاد</option>'+
+      '<option value="glass"'+(curMode==='glass'?' selected':'')+'>هوية زجاجية فاخرة</option>'+
       '<option value="logo"'+(curMode==='logo'?' selected':'')+'>الشعار فقط</option>'+
     '</select></div>'+
     '<div class="field"><label>حركة الشعار والاسم</label><select id="brAnim">'+
@@ -724,7 +713,7 @@ function adminServices(p){
   p.innerHTML='<div class="admin-actions"><button class="btn primary" id="addService">+ إضافة خدمة</button></div>'+
     '<p class="notice">التعديل والإخفاء والترتيب والحذف تُحفظ فوراً. مع الربط السحابي تصل التعديلات للعملاء مباشرة.</p>'+
     state.products.map((x,i)=>
-      '<div class="service-row"><div><strong>'+esc(x.icon)+' '+esc(x.name)+'</strong><small>'+esc(x.price)+(x.visible===false?' • مخفية عن العملاء':' • ظاهرة للعملاء')+'</small></div>'+
+      '<div class="service-row"><div><strong>'+svcIc(x)+esc(x.name)+'</strong><small>'+esc(x.price)+(x.visible===false?' • مخفية عن العملاء':' • ظاهرة للعملاء')+'</small></div>'+
       '<div class="svc-actions">'+
         '<button class="mini-btn" data-act="edit" data-id="'+esc(x.id)+'">تعديل</button>'+
         '<button class="mini-btn" data-act="up" data-id="'+esc(x.id)+'"'+(i===0?' disabled':'')+'>↑</button>'+
