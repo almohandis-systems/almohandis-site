@@ -954,3 +954,5 @@ html body.lt .footer .wrap>strong[data-keepfx]{font-size:clamp(26px,7.8vw,34px)!
 .estimate small{display:block!important;text-align:center!important}
 .ref-card :is(p,span,strong,small){text-align:center!important}
 html body:not(.lt) main .estimate :is(.btn,button,a.btn){color:#0b1220!important;-webkit-text-fill-color:#0b1220!important}
+
+html[dir=ltr] .footer .footer-links a{font-size:13.5px!important;white-space:nowrap!important}
