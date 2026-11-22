@@ -450,12 +450,12 @@ function renderBrand(override){
   if(name.children[0]&&mode!=='glass'){
     name.children[0].style.setProperty('color',effA,'important');
     name.children[0].style.setProperty('-webkit-text-fill-color',effA,'important');
-    if(mode!=='2d')name.children[0].style.setProperty('text-shadow',shadA,'important');
+    name.children[0].style.setProperty('text-shadow',(mode!=='2d'&&!document.body.classList.contains('lt'))?shadA:'none','important');
   }
   if(name.children[1]&&mode!=='glass'){
     name.children[1].style.setProperty('color',effB,'important');
     name.children[1].style.setProperty('-webkit-text-fill-color',effB,'important');
-    if(mode!=='2d')name.children[1].style.setProperty('text-shadow',shadB,'important');
+    name.children[1].style.setProperty('text-shadow',(mode!=='2d'&&!document.body.classList.contains('lt'))?shadB:'none','important');
   }
   frame.className=frame.className.replace(/\s?brand-(2d|3d|sweep|float|pulse|rotate|spin3d|bounce|glow|glass)\b/g,'');
   if(mode==='2d')frame.classList.add('brand-2d');
