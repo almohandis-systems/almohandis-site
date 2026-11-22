@@ -434,7 +434,7 @@ function renderBrand(override){
   name.style.display=mode==='logo'?'none':'flex';
   const w=Math.max(55,Math.min(95,Number(b.frameWidth)||75));
   frame.style.setProperty('--brand-w',w+'%');
-  frame.style.width=(window.innerWidth<=760?94:w)+'%';
+  frame.style.width=(window.innerWidth<=760?86:w)+'%';
   const rawA=b.colorA||'#9a5806';
   const rawB=b.colorB||'#091526';
   const effA=smartContrastHex(rawA, light, 'gold');
@@ -447,12 +447,25 @@ function renderBrand(override){
   frame.style.setProperty('--brand-b-eff',effB);
   frame.style.setProperty('--brand-a-shadow',shadA);
   frame.style.setProperty('--brand-b-shadow',shadB);
-  if(name.children[0]&&mode!=='glass'){
+  const ltMetal=document.body.classList.contains('lt')&&mode!=='2d'&&mode!=='glass';
+  if(ltMetal){
+    const gloss='linear-gradient(180deg,#ffffff 0%,#dce8f8 26%,#8ea8c8 46%,#f4f9ff 50%,#5f7a9e 64%,#22364f 100%)';
+    const xsh='0 -1px 1px rgba(255,255,255,.5),0 1px 0 #8296b0,0 2px 0 #677b96,0 3px 0 #4c5f78,0 4px 0 #33445c,0 6px 3px rgba(10,20,38,.45)';
+    [name.children[0],name.children[1]].forEach(sp=>{if(!sp)return;
+      sp.style.setProperty('background-image',gloss,'important');
+      sp.style.setProperty('-webkit-background-clip','text','important');
+      sp.style.setProperty('background-clip','text','important');
+      sp.style.setProperty('color','transparent','important');
+      sp.style.setProperty('-webkit-text-fill-color','transparent','important');
+      sp.style.setProperty('text-shadow',xsh,'important');
+    });
+  }
+  if(!ltMetal&&name.children[0]&&mode!=='glass'){
     name.children[0].style.setProperty('color',effA,'important');
     name.children[0].style.setProperty('-webkit-text-fill-color',effA,'important');
     name.children[0].style.setProperty('text-shadow',(mode!=='2d'&&!document.body.classList.contains('lt'))?shadA:'0 1px 0 #6d3f04,0 2px 0 #54300a,0 3px 0 #3d2206,0 4px 6px rgba(30,18,0,.35)','important');
   }
-  if(name.children[1]&&mode!=='glass'){
+  if(!ltMetal&&name.children[1]&&mode!=='glass'){
     name.children[1].style.setProperty('color',effB,'important');
     name.children[1].style.setProperty('-webkit-text-fill-color',effB,'important');
     name.children[1].style.setProperty('text-shadow',(mode!=='2d'&&!document.body.classList.contains('lt'))?shadB:'0 1px 0 #ffffff,0 2px 0 #93a5bd,0 3px 0 #5c6f8c,0 4px 6px rgba(15,28,49,.35)','important');
@@ -1135,7 +1148,7 @@ render();initBackend();startShowcase();if(location.hash.startsWith('#service-'))
     document.querySelectorAll('header,main,footer').forEach(root=>{
       root.querySelectorAll('*').forEach(el=>{
         if(!hasText(el))return;
-        if(el.closest('[data-keepfx]'))return;
+        if(el.closest('[data-keepfx],#brandName,#brandFrame'))return;
         const L=lum(effBg(el));
         const col=cr(L,LB)>=cr(L,LW)?NB:WH;
         el.style.setProperty('color',col,'important');
