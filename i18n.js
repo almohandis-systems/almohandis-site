@@ -20,7 +20,7 @@ work:[
  {name:'CRASH OS — Interactive Restaurant Menu',desc:'An interactive restaurant menu: orders, cart, discount code, and installable as a phone app.'},
  {name:'LUSTER — Cleaning Products Store',desc:'An online store for cleaning and home-care products, with offers, bundles, and a shopping cart.'},
  {name:'Complete Restaurant Management Suite',desc:'An integrated restaurant platform: menu, orders, cashier, and reports in one place.'},
- {name:'Reaya Fayoum — Medical Discount Network',desc:'A medical services site with discounts on checkups and tests, and easy booking.'}
+ {name:'Reaya Fayoum — Medical Discount Network',desc:'An accredited directory of Fayoum doctors, pharmacies, labs and radiology centers with discounts of up to 30%, a digital family membership card for up to 5 members with a membership code, barcode and expiry date, a savings calculator, easy booking, and a Join-as-a-provider page for medical facilities.'}
 ],
 ui:{
   detailEyebrow:'SERVICE DETAILS',orderNow:'Order this service now',backToServices:'Back to services',
@@ -69,7 +69,7 @@ window.ALMO_I18N={lang:(function(){try{return localStorage.getItem('almo_lang')|
 window.TR=function(ar,en){return (window.ALMO_I18N&&ALMO_I18N.lang==='en')?en:ar};
 window.T=function(k){return (window.ALMO_EN&&ALMO_EN.ui&&ALMO_EN.ui[k])||''};
 window.svcText=function(p,f){const e=window.ALMO_EN&&ALMO_EN.svc&&ALMO_EN.svc[p.id];return (ALMO_I18N.lang==='en'&&e&&e[f])?e[f]:p[f]};
-window.workText=function(i,f){const e=window.ALMO_EN&&ALMO_EN.work&&ALMO_EN.work[i];return (ALMO_I18N.lang==='en'&&e&&e[f])?e[f]:(window.WORK_ITEMS&&WORK_ITEMS[i]?WORK_ITEMS[i][f]:'')};
+window.workText=function(i,f){const e=window.ALMO_EN&&ALMO_EN.work&&ALMO_EN.work[i];return (ALMO_I18N.lang==='en'&&e&&e[f])?e[f]:(typeof WORK_ITEMS!=='undefined'&&WORK_ITEMS[i]?WORK_ITEMS[i][f]:'')};
 const I18N_MAP=[
  ['navServices','الخدمات'],['navProjects','المشروعات'],['navBuilder','ابنِ مشروعك'],['navAbout','عن المنظومة'],
  ['heroKicker','EXPLORE OUR CAPABILITIES'],['heroTitle','اختر وجهتك الرقمية'],
