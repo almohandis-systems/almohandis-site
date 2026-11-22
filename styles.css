@@ -946,3 +946,11 @@ body.lt footer,body.lt .footer{padding-bottom:84px!important}
 html body.lt main .work-card :is(.demo-badge,.demo-play,.demo-play span){background:rgba(9,18,34,.78)!important;color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;text-shadow:none!important;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);border-radius:12px!important;padding:6px 14px!important}
 
 html body:not(.lt) main :is(.work-body p,.work-body li,.estimate,.estimate p,.estimate .hint,.hint){color:#dbe4f0!important;-webkit-text-fill-color:#dbe4f0!important;text-shadow:none!important}
+
+html body.lt .footer .wrap>strong[data-keepfx]{font-size:clamp(26px,7.8vw,34px)!important;font-weight:900!important;letter-spacing:.4px;color:#0e1a30!important;-webkit-text-fill-color:#0e1a30!important;text-shadow:0 -1px 0 rgba(255,255,255,.55),0 1px 0 #4a5c80,0 2px 0 #415270,0 3px 0 #384861,0 4px 0 #2f3e52,0 5px 0 #263445!important}
+.footer .footer-links{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important;max-width:330px!important;margin:16px auto 0!important}
+.footer .footer-links a{display:block!important;text-align:center!important}
+.footer .wrap>div:last-child{text-align:center!important;margin:16px auto 0!important;max-width:330px!important;line-height:1.9!important}
+.estimate small{display:block!important;text-align:center!important}
+.ref-card :is(p,span,strong,small){text-align:center!important}
+html body:not(.lt) main .estimate :is(.btn,button,a.btn){color:#0b1220!important;-webkit-text-fill-color:#0b1220!important}
