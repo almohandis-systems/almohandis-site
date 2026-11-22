@@ -450,12 +450,12 @@ function renderBrand(override){
   if(name.children[0]&&mode!=='glass'){
     name.children[0].style.setProperty('color',effA,'important');
     name.children[0].style.setProperty('-webkit-text-fill-color',effA,'important');
-    name.children[0].style.setProperty('text-shadow',(mode!=='2d'&&!document.body.classList.contains('lt'))?shadA:'none','important');
+    name.children[0].style.setProperty('text-shadow',(mode!=='2d'&&!document.body.classList.contains('lt'))?shadA:'0 1px 0 #6d3f04,0 2px 0 #54300a,0 3px 0 #3d2206,0 4px 6px rgba(30,18,0,.35)','important');
   }
   if(name.children[1]&&mode!=='glass'){
     name.children[1].style.setProperty('color',effB,'important');
     name.children[1].style.setProperty('-webkit-text-fill-color',effB,'important');
-    name.children[1].style.setProperty('text-shadow',(mode!=='2d'&&!document.body.classList.contains('lt'))?shadB:'none','important');
+    name.children[1].style.setProperty('text-shadow',(mode!=='2d'&&!document.body.classList.contains('lt'))?shadB:'0 1px 0 #ffffff,0 2px 0 #93a5bd,0 3px 0 #5c6f8c,0 4px 6px rgba(15,28,49,.35)','important');
   }
   frame.className=frame.className.replace(/\s?brand-(2d|3d|sweep|float|pulse|rotate|spin3d|bounce|glow|glass)\b/g,'');
   if(mode==='2d')frame.classList.add('brand-2d');
