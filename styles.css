@@ -763,3 +763,16 @@ h1,h2,h3{font-family:'Cairo',Arial,sans-serif}
 .work-card .work-thumb:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,color-mix(in srgb,var(--acc) 20%,transparent),transparent 46%);z-index:1;pointer-events:none}
 .work-thumb:after{z-index:2}
 .demo-badge{z-index:2}
+
+/* ===== Crystal-glass identity + full-app glass system (dark backdrop) ===== */
+.brand-frame.brand-glass{background:transparent!important;border-color:transparent!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;overflow:visible}
+.brand-frame.brand-glass:after{opacity:.28}
+.brand-frame.brand-glass .brand-name{font-size:clamp(30px,6vw,62px);letter-spacing:.02em;line-height:1.15}
+.brand-frame.brand-glass .brand-name span{background:linear-gradient(178deg,#ffffff 4%,#dbe9f8 26%,#8fb0cf 47%,#f6fbff 54%,#7d9cba 78%,#d8eafa 96%);-webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent!important;text-shadow:none!important;filter:drop-shadow(0 3px 12px rgba(0,0,0,.5)) drop-shadow(0 0 26px rgba(190,220,255,.16))}
+.brand-frame.brand-glass .brand-sub{color:#cfe0f2b8;letter-spacing:.32em}
+.service-card,.feature,.info-panel,.estimate,.wa-card{background:linear-gradient(150deg,#ffffff13,#ffffff06)!important;border-color:#ffffff2c!important;backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);box-shadow:inset 0 1px 0 #ffffff2e,0 16px 40px #0005}
+.work-card{background:linear-gradient(160deg,color-mix(in srgb,var(--acc) 20%,#17110c),color-mix(in srgb,var(--acc) 6%,#0b1420) 62%)!important;backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);box-shadow:inset 0 1px 0 #ffffff28,0 16px 40px #0006}
+.btn{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);background:#ffffff10;border-color:#ffffff30;box-shadow:inset 0 1px 0 #ffffff2a}
+nav a,nav button{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);background:#ffffff0c;border-color:#ffffff1e}
+.tray-item,.chip{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.detail-cta{backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
