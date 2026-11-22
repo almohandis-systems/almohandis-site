@@ -974,7 +974,8 @@ html body.lt #brandFrame .brand-name :is(span.a,span.b){background-image:none!im
    their clean light look. Purely visual: no content changes.
    ========================================================== */
 body:not(.lt){
-  background:linear-gradient(180deg,rgba(7,11,19,.60),rgba(7,11,19,.76) 45%,rgba(7,11,19,.90)),url("assets/cine/texture-silk.webp") center/cover no-repeat fixed,#070b13!important;
+  /* Overlay + silk texture + the owner-selected design-set gradient (var) as the base tint */
+  background:linear-gradient(180deg,rgba(7,11,19,.52),rgba(7,11,19,.68) 45%,rgba(7,11,19,.86)),url("assets/cine/texture-silk.webp") center/cover no-repeat fixed,var(--client-wallpaper,#070b13)!important;
 }
 ::selection{background:#e8c779;color:#17130b}
 body:not(.lt)::-webkit-scrollbar{width:11px}
