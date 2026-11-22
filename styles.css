@@ -943,4 +943,4 @@ body.lt footer,body.lt .footer{padding-bottom:84px!important}
 
 
 /* c27 video buttons on dark media */
-body.lt .demo-badge,body.lt .demo-play span,body.lt .demo-play{background:rgba(9,18,34,.78)!important;color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;text-shadow:none!important;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);border-radius:12px!important;padding:6px 14px!important}
+html body.lt main .work-card :is(.demo-badge,.demo-play,.demo-play span){background:rgba(9,18,34,.78)!important;color:#ffffff!important;-webkit-text-fill-color:#ffffff!important;text-shadow:none!important;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);border-radius:12px!important;padding:6px 14px!important}
