@@ -1095,3 +1095,21 @@ function renderSocial(){
 }
 
 render();initBackend();startShowcase();if(location.hash.startsWith('#service-')){let id=decodeURIComponent(location.hash.slice(9));setTimeout(()=>openDetail(id),250)}
+
+// structured project request form -> WhatsApp
+(function(){
+  const form=document.getElementById('requestForm');if(!form)return;
+  const typeSel=document.getElementById('reqType');
+  function fillTypes(){const ps=visibleProducts();const cur=typeSel.value;typeSel.innerHTML=ps.map(p=>'<option value="'+esc(p.id)+'">'+esc(svcText(p,'name'))+'</option>').join('');if(cur&&ps.some(p=>p.id===cur))typeSel.value=cur;}
+  fillTypes();
+  const lt=document.getElementById('langToggle');if(lt)lt.addEventListener('click',()=>setTimeout(fillTypes,60));
+  form.addEventListener('submit',function(e){e.preventDefault();
+    const name=document.getElementById('reqName').value.trim();
+    const topt=typeSel.options[typeSel.selectedIndex];const type=topt?topt.textContent:'';
+    const bopt=document.getElementById('reqBudget');const budget=bopt.options[bopt.selectedIndex].textContent;
+    const details=document.getElementById('reqDetails').value.trim();
+    const en=window.ALMO_I18N&&ALMO_I18N.lang==='en';
+    const msg=en?('New project request\nName: '+name+'\nProject type: '+type+'\nBudget: '+budget+'\nDetails: '+(details||'-')):('طلب مشروع جديد\nالاسم: '+name+'\nنوع المشروع: '+type+'\nالميزانية: '+budget+'\nالتفاصيل: '+(details||'-'));
+    window.open(wa()+'?text='+encodeURIComponent(msg),'_blank','noopener');
+  });
+})();
