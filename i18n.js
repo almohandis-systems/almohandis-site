@@ -57,7 +57,11 @@ window.ALMO_EN_STATIC={
  footer:'ALMOHANDIS - SYSTEMS. All rights reserved.',
  detailBackTop:'Back to services ×',
  installIosT:'Install the app on iPhone',
- tagline:'Your idea becomes a company. We build it into an app.',installIos1:'1. Tap the share button at the bottom of Safari.',installIos2:'2. Choose "Add to Home Screen".',installIos3:'3. Tap "Add" at the top right.',
+ tagline:'Your idea becomes a company. We build it into an app.',
+ reqTitle:'Request Your Project',reqSub:'Fill in the form and your request reaches us directly on WhatsApp.',
+ reqName:'Full name',reqType:'Project type',reqBudget:'Approximate budget',
+ reqB0:'Not specified',reqB1:'Under EGP 5,000',reqB2:'EGP 5,000 - 15,000',reqB3:'EGP 15,000 - 50,000',reqB4:'Over EGP 50,000',
+ reqDetails:'Idea details',reqSend:'Send request via WhatsApp',installIos1:'1. Tap the share button at the bottom of Safari.',installIos2:'2. Choose "Add to Home Screen".',installIos3:'3. Tap "Add" at the top right.',
  installTitle:'📲 Install the ALMOHANDIS app',installLead:'To install the app with its official icon directly on your home screen:'
 };
 /* ===== i18n runtime ===== */
@@ -88,7 +92,11 @@ const I18N_MAP=[
  ['contactTitle','تواصل معنا'],['footer','ALMOHANDIS - SYSTEMS. جميع الحقوق محفوظة.'],
  ['detailBackTop','رجوع إلى الخدمات ×'],
  ['installIosT','تثبيت التطبيق على iPhone'],
- ['tagline','فكرتك تبقى شركة. نبنيها لك تطبيق.']
+ ['tagline','فكرتك تبقى شركة. نبنيها لك تطبيق.'],
+ ['reqTitle','اطلب مشروعك'],['reqSub','املأ النموذج وسيصل طلبك مباشرة عبر واتساب.'],
+ ['reqName','الاسم الكامل'],['reqType','نوع المشروع'],['reqBudget','الميزانية التقريبية'],
+ ['reqB0','غير محددة'],['reqB1','أقل من 5000 جنيه'],['reqB2','5000 - 15000 جنيه'],['reqB3','15000 - 50000 جنيه'],['reqB4','أكثر من 50000 جنيه'],
+ ['reqDetails','تفاصيل الفكرة'],['reqSend','إرسال الطلب عبر واتساب']
 ];
 const I18N_ORIG=new WeakMap();
 function i18nSwap(toEn){
