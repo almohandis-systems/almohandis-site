@@ -755,3 +755,11 @@ h1,h2,h3{font-family:'Cairo',Arial,sans-serif}
 .brand-frame.brand-glass:after{background:linear-gradient(90deg,transparent,#ffffffa8,transparent)}
 .svc-ic{display:inline-block;width:20px;height:20px;vertical-align:-4px;margin-inline-end:7px;color:#d9b465}
 .svc-ic svg{width:100%;height:100%;display:block}
+
+/* ===== Per-project distinct identity (accent-tinted card, title, preview frame) ===== */
+.work-card{background:linear-gradient(160deg,color-mix(in srgb,var(--acc) 16%,#17243a),color-mix(in srgb,var(--acc) 5%,#0b1420) 62%);border-color:color-mix(in srgb,var(--acc) 34%,transparent)}
+.work-card h3{color:var(--accSoft)}
+.work-card .work-thumb{border-bottom:2px solid color-mix(in srgb,var(--acc) 42%,transparent)}
+.work-card .work-thumb:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,color-mix(in srgb,var(--acc) 20%,transparent),transparent 46%);z-index:1;pointer-events:none}
+.work-thumb:after{z-index:2}
+.demo-badge{z-index:2}
