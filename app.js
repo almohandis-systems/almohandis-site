@@ -1135,6 +1135,7 @@ render();initBackend();startShowcase();if(location.hash.startsWith('#service-'))
     document.querySelectorAll('header,main,footer').forEach(root=>{
       root.querySelectorAll('*').forEach(el=>{
         if(!hasText(el))return;
+        if(el.closest('[data-keepfx]'))return;
         const L=lum(effBg(el));
         const col=cr(L,LB)>=cr(L,LW)?NB:WH;
         el.style.setProperty('color',col,'important');
