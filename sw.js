@@ -1,1 +1,49 @@
-self.addEventListener('install',()=>self.skipWaiting());self.addEventListener('activate',e=>e.waitUntil(self.registration.unregister().then(()=>self.clients.matchAll()).then(cs=>Promise.all(cs.filter(c=>c.url.startsWith(self.registration.scope)).map(c=>c.navigate(c.url))))));
+/* ALMOHANDIS - SYSTEMS: offline + fast repeat visits.
+   HTML: network-first (fresh content wins, cache is the offline fallback).
+   Static assets: cache-first (they change only with a deploy, which bumps CACHE). */
+const CACHE = 'almo-systems-v42';
+const ASSETS = [
+  './',
+  'index.html',
+  'styles.css',
+  'pwa.js',
+  'app.js',
+  'manifest.json',
+  'assets/icon-192.png',
+  'assets/icon-512.png',
+  'assets/owner-photo.webp',
+  'assets/cine/hero-cinematic.webp',
+  'assets/cine/texture-silk.webp',
+  'assets/cine/cta-cinematic.webp'
+];
+
+self.addEventListener('install', (e) => {
+  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting()));
+});
+
+self.addEventListener('activate', (e) => {
+  e.waitUntil(
+    caches.keys()
+      .then((keys) => Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k))))
+      .then(() => self.clients.claim())
+  );
+});
+
+self.addEventListener('fetch', (e) => {
+  const req = e.request;
+  if (req.method !== 'GET' || !req.url.startsWith(self.location.origin)) return;
+  if (req.mode === 'navigate') {
+    e.respondWith(
+      fetch(req)
+        .then((res) => { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(req, copy)); return res; })
+        .catch(() => caches.match(req).then((r) => r || caches.match('./')))
+    );
+    return;
+  }
+  e.respondWith(
+    caches.match(req).then((hit) => hit || fetch(req).then((res) => {
+      if (res.ok) { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(req, copy)); }
+      return res;
+    }))
+  );
+});
