@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /almohandis-site/
+Sitemap: https://almohandis-systems.github.io/almohandis-site/sitemap.xml
